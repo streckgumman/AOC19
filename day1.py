@@ -105,10 +105,14 @@ inputs = [129192,
 
 def calculate():
     number = 0
+
     for i in inputs:
-        n = math.floor(i / 3)
-        n -= 2
-        number += n
+        n = i
+        while n > 5:
+            n = math.floor(n / 3)
+            n -= 2
+            number += n
+
     print(number)
     return
 
